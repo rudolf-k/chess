@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="endscreen.css">
+
+    </head>
+    <body>
+        <div class="options">
+            <div id="winner"></div>
+            <a href="index.html" type="button" class="menulink" id="link"><span id="menutext">Main Menu</span><img src="assets/visuals/home2.png" id="homeimg"></a>
+
+        </div>
+
+        <img src="assets/visuals/endscrbackground.png" id="bgimg">
+
+
+        <script>
+            var url = new URL(window.location);
+            var winner = url.searchParams.get("w");
+            if(winner == 'w'){
+                document.getElementById('winner').innerHTML = "White won.";
+                document.title = "White won.";
+            }
+            else {
+                document.getElementById('winner').innerHTML = "Dark won.";
+                document.title = "Black won.";
+            }
+        </script>
+    </body>
+</html>
